@@ -52,7 +52,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "xterm", NULL };
+static const char *termcmd[]  = { "terminal", NULL };
 static const char *mpd_toggle[] = { "mpc", "toggle", NULL};
 static const char *mpcNext[] = { "mpc", "next", NULL};
 static const char *mpcPrev[] = { "mpc", "prev", NULL};
