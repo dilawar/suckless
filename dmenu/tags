@@ -1,0 +1,135 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BG	draw.h	4;"	d
+CC	config.mk	/^CC = cc$/;"	m
+CFLAGS	config.mk	/^CFLAGS   = -ansi -pedantic -Wall -Os ${INCS} ${CPPFLAGS}$/;"	m
+CPPFLAGS	config.mk	/^CPPFLAGS = -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\\"${VERSION}\\" ${XINERAMAFLAGS}$/;"	m
+ColBG	draw.h	/^enum { ColBG, ColFG, ColBorder, ColLast };$/;"	e	enum:__anon1
+ColBorder	draw.h	/^enum { ColBG, ColFG, ColBorder, ColLast };$/;"	e	enum:__anon1
+ColFG	draw.h	/^enum { ColBG, ColFG, ColBorder, ColLast };$/;"	e	enum:__anon1
+ColLast	draw.h	/^enum { ColBG, ColFG, ColBorder, ColLast };$/;"	e	enum:__anon1
+DC	draw.h	/^} DC;  \/* draw context *\/$/;"	t	typeref:struct:__anon2
+DEFAULTFN	draw.c	12;"	d	file:
+FG	draw.h	3;"	d
+FLAG	stest.c	10;"	d	file:
+INCS	config.mk	/^INCS = -I${X11INC}$/;"	m
+INTERSECT	dmenu.c	16;"	d	file:
+Item	dmenu.c	/^struct Item {$/;"	s	file:
+Item	dmenu.c	/^typedef struct Item Item;$/;"	t	typeref:struct:Item	file:
+LDFLAGS	config.mk	/^LDFLAGS  = -s ${LIBS}$/;"	m
+LIBS	config.mk	/^LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS}$/;"	m
+MANPREFIX	config.mk	/^MANPREFIX = ${PREFIX}\/share\/man$/;"	m
+MAX	dmenu.c	19;"	d	file:
+MAX	draw.c	10;"	d	file:
+MIN	dmenu.c	18;"	d	file:
+MIN	draw.c	11;"	d	file:
+OBJ	Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+PREFIX	config.mk	/^PREFIX = \/usr\/local$/;"	m
+SRC	Makefile	/^SRC = dmenu.c draw.c stest.c$/;"	m
+VERSION	config.mk	/^VERSION = 4.5-tip$/;"	m
+X11INC	config.mk	/^X11INC = \/usr\/X11R6\/include$/;"	m
+X11LIB	config.mk	/^X11LIB = \/usr\/X11R6\/lib$/;"	m
+XINERAMAFLAGS	config.mk	/^XINERAMAFLAGS = -DXINERAMA$/;"	m
+XINERAMALIBS	config.mk	/^XINERAMALIBS  = -lXinerama$/;"	m
+appenditem	dmenu.c	/^appenditem(Item *item, Item **list, Item **last) {$/;"	f
+ascent	draw.h	/^		int ascent;$/;"	m	struct:__anon2::__anon3
+bh	dmenu.c	/^static int bh, mw, mh;$/;"	v	file:
+calcoffsets	dmenu.c	/^calcoffsets(void) {$/;"	f
+canvas	draw.h	/^	Pixmap canvas;$/;"	m	struct:__anon2
+cistrstr	dmenu.c	/^cistrstr(const char *s, const char *sub) {$/;"	f
+clip	dmenu.c	/^static Atom clip, utf8;$/;"	v	file:
+curr	dmenu.c	/^static Item *prev, *curr, *next, *sel;$/;"	v	file:
+cursor	dmenu.c	/^static size_t cursor = 0;$/;"	v	file:
+dc	dmenu.c	/^static DC *dc;$/;"	v	file:
+descent	draw.h	/^		int descent;$/;"	m	struct:__anon2::__anon3
+dpy	draw.h	/^	Display *dpy;$/;"	m	struct:__anon2
+drawmenu	dmenu.c	/^drawmenu(void) {$/;"	f
+drawrect	draw.c	/^drawrect(DC *dc, int x, int y, unsigned int w, unsigned int h, Bool fill, unsigned long color) {$/;"	f
+drawtext	draw.c	/^drawtext(DC *dc, const char *text, unsigned long col[ColLast]) {$/;"	f
+drawtextn	draw.c	/^drawtextn(DC *dc, const char *text, size_t n, unsigned long col[ColLast]) {$/;"	f
+eprintf	draw.c	/^eprintf(const char *fmt, ...) {$/;"	f
+flag	stest.c	/^static bool flag[26];$/;"	v	file:
+font	config.def.h	/^static const char *font = NULL;             \/* -fn option; default X11 font or font set      *\/$/;"	v
+font	config.h	/^static const char *font = NULL;             \/* -fn option; default X11 font or font set      *\/$/;"	v
+font	draw.h	/^	} font;$/;"	m	struct:__anon2	typeref:struct:__anon2::__anon3
+freedc	draw.c	/^freedc(DC *dc) {$/;"	f
+fstrncmp	dmenu.c	/^static int (*fstrncmp)(const char *, const char *, size_t) = strncmp;$/;"	v	file:
+fstrstr	dmenu.c	/^static char *(*fstrstr)(const char *, const char *) = strstr;$/;"	v	file:
+gc	draw.h	/^	GC gc;$/;"	m	struct:__anon2
+getcolor	draw.c	/^getcolor(DC *dc, const char *colstr) {$/;"	f
+grabkeyboard	dmenu.c	/^grabkeyboard(void) {$/;"	f
+h	draw.h	/^	int x, y, w, h;$/;"	m	struct:__anon2
+height	draw.h	/^		int height;$/;"	m	struct:__anon2::__anon3
+initdc	draw.c	/^initdc(void) {$/;"	f
+initfont	draw.c	/^initfont(DC *dc, const char *fontstr) {$/;"	f
+inputw	dmenu.c	/^static int inputw, promptw;$/;"	v	file:
+insert	dmenu.c	/^insert(const char *str, ssize_t n) {$/;"	f
+invert	draw.h	/^	Bool invert;$/;"	m	struct:__anon2
+items	dmenu.c	/^static Item *items = NULL;$/;"	v	file:
+keypress	dmenu.c	/^keypress(XKeyEvent *ev) {$/;"	f
+left	dmenu.c	/^	Item *left, *right;$/;"	m	struct:Item	file:
+lines	config.def.h	/^static unsigned int lines = 0;$/;"	v
+lines	config.h	/^static unsigned int lines = 0;$/;"	v
+loadfont	draw.c	/^loadfont(DC *dc, const char *fontstr) {$/;"	f
+main	dmenu.c	/^main(int argc, char *argv[]) {$/;"	f
+main	stest.c	/^main(int argc, char *argv[]) {$/;"	f
+mapdc	draw.c	/^mapdc(DC *dc, Window win, unsigned int w, unsigned int h) {$/;"	f
+match	dmenu.c	/^match(void) {$/;"	f
+match	stest.c	/^static bool match = false;$/;"	v	file:
+matchend	dmenu.c	/^static Item *matches, *matchend;$/;"	v	file:
+matches	dmenu.c	/^static Item *matches, *matchend;$/;"	v	file:
+mh	dmenu.c	/^static int bh, mw, mh;$/;"	v	file:
+mon	dmenu.c	/^static int mon = -1;$/;"	v	file:
+mw	dmenu.c	/^static int bh, mw, mh;$/;"	v	file:
+new	stest.c	/^static struct stat old, new;$/;"	v	typeref:struct:	file:
+next	dmenu.c	/^static Item *prev, *curr, *next, *sel;$/;"	v	file:
+nextrune	dmenu.c	/^nextrune(int inc) {$/;"	f
+normbgcolor	config.def.h	/^static const char *normbgcolor = "#222222"; \/* -nb option; normal background                 *\/$/;"	v
+normbgcolor	config.h	/^static const char *normbgcolor = "#222222"; \/* -nb option; normal background                 *\/$/;"	v
+normcol	dmenu.c	/^static unsigned long normcol[ColLast];$/;"	v	file:
+normfgcolor	config.def.h	/^static const char *normfgcolor = "#bbbbbb"; \/* -nf option; normal foreground                 *\/$/;"	v
+normfgcolor	config.h	/^static const char *normfgcolor = "#bbbbbb"; \/* -nf option; normal foreground                 *\/$/;"	v
+old	stest.c	/^static struct stat old, new;$/;"	v	typeref:struct:stat	file:
+out	dmenu.c	/^	Bool out;$/;"	m	struct:Item	file:
+outbgcolor	config.def.h	/^static const char *outbgcolor  = "#00ffff";$/;"	v
+outbgcolor	config.h	/^static const char *outbgcolor  = "#00ffff";$/;"	v
+outcol	dmenu.c	/^static unsigned long outcol[ColLast];$/;"	v	file:
+outfgcolor	config.def.h	/^static const char *outfgcolor  = "#000000";$/;"	v
+outfgcolor	config.h	/^static const char *outfgcolor  = "#000000";$/;"	v
+paste	dmenu.c	/^paste(void) {$/;"	f
+prev	dmenu.c	/^static Item *prev, *curr, *next, *sel;$/;"	v	file:
+prompt	config.def.h	/^static const char *prompt = NULL;           \/* -p  option; prompt to the elft of input field *\/$/;"	v
+prompt	config.h	/^static const char *prompt = NULL;           \/* -p  option; prompt to the elft of input field *\/$/;"	v
+promptw	dmenu.c	/^static int inputw, promptw;$/;"	v	file:
+readstdin	dmenu.c	/^readstdin(void) {$/;"	f
+resizedc	draw.c	/^resizedc(DC *dc, unsigned int w, unsigned int h) {$/;"	f
+right	dmenu.c	/^	Item *left, *right;$/;"	m	struct:Item	file:
+run	dmenu.c	/^run(void) {$/;"	f
+sel	dmenu.c	/^static Item *prev, *curr, *next, *sel;$/;"	v	file:
+selbgcolor	config.def.h	/^static const char *selbgcolor  = "#005577"; \/* -sb option; selected background               *\/$/;"	v
+selbgcolor	config.h	/^static const char *selbgcolor  = "#005577"; \/* -sb option; selected background               *\/$/;"	v
+selcol	dmenu.c	/^static unsigned long selcol[ColLast];$/;"	v	file:
+selfgcolor	config.def.h	/^static const char *selfgcolor  = "#eeeeee"; \/* -sf option; selected foreground               *\/$/;"	v
+selfgcolor	config.h	/^static const char *selfgcolor  = "#eeeeee"; \/* -sf option; selected foreground               *\/$/;"	v
+set	draw.h	/^		XFontSet set;$/;"	m	struct:__anon2::__anon3
+setup	dmenu.c	/^setup(void) {$/;"	f
+test	stest.c	/^test(const char *path, const char *name) {$/;"	f
+text	dmenu.c	/^	char *text;$/;"	m	struct:Item	file:
+text	dmenu.c	/^static char text[BUFSIZ] = "";$/;"	v	file:
+textnw	draw.c	/^textnw(DC *dc, const char *text, size_t len) {$/;"	f
+textw	draw.c	/^textw(DC *dc, const char *text) {$/;"	f
+topbar	config.def.h	/^static Bool topbar = True;                  \/* -b  option; if False, dmenu appears at bottom *\/$/;"	v
+topbar	config.h	/^static Bool topbar = True;                  \/* -b  option; if False, dmenu appears at bottom *\/$/;"	v
+usage	dmenu.c	/^usage(void) {$/;"	f
+utf8	dmenu.c	/^static Atom clip, utf8;$/;"	v	file:
+w	draw.h	/^	int x, y, w, h;$/;"	m	struct:__anon2
+width	draw.h	/^		int width;$/;"	m	struct:__anon2::__anon3
+win	dmenu.c	/^static Window win;$/;"	v	file:
+x	draw.h	/^	int x, y, w, h;$/;"	m	struct:__anon2
+xfont	draw.h	/^		XFontStruct *xfont;$/;"	m	struct:__anon2::__anon3
+xic	dmenu.c	/^static XIC xic;$/;"	v	file:
+y	draw.h	/^	int x, y, w, h;$/;"	m	struct:__anon2
