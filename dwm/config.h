@@ -56,10 +56,11 @@ static const char *termcmd[]  = { "xterm", NULL };
 static const char *mpd_toggle[] = { "mpc", "toggle", NULL};
 static const char *mpcNext[] = { "mpc", "next", NULL};
 static const char *mpcPrev[] = { "mpc", "prev", NULL};
-static const char *mpdDelete[] = { "manage_mpc.sh", "-d", NULL};
-static const char *mpdAddFav[] = { "manage_mpc.sh","-a", NULL};
+static const char *mpdDelete[] = { "~/Scripts/manage_mpc.sh", "-d", NULL};
+static const char *mpdAddFav[] = { "~/Scripts/manage_mpc.sh","-a", NULL};
 static const char *volUp[] = { "amixer","-q", "set", "PCM", "2dB+", NULL};
 static const char *volDown[] = { "amixer","-q", "set", "PCM", "2dB-", NULL};
+static const char *lock[] = { "slock", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,6 +104,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lock} },
 };
 
 /* button definitions */
