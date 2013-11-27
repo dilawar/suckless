@@ -53,11 +53,25 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "xterm", NULL };
+static const char *mpd_toggle[] = { "mpc", "toggle", NULL};
+static const char *mpcNext[] = { "mpc", "next", NULL};
+static const char *mpcPrev[] = { "mpc", "prev", NULL};
+static const char *mpdDelete[] = { "~/Scripts/manage_mpc.sh", "-d", NULL};
+static const char *mpdAddFav[] = { "~/Scripts/manage_mpc.sh","-a", NULL};
+static const char *volUp[] = { "amixer","-q", "set", "PCM", "2dB+", NULL};
+static const char *volDown[] = { "amixer","-q", "set", "PCM", "2dB-", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ ControlMask|Mod1Mask,         XK_t,      spawn,          {.v = mpd_toggle } },
+	{ ControlMask|Mod1Mask,         XK_n,      spawn,          {.v = mpcNext } },
+	{ ControlMask|Mod1Mask,         XK_p,      spawn,          {.v = mpcPrev } },
+	{ ControlMask|Mod1Mask,         XK_d,      spawn,          {.v = mpdDelete } },
+	{ ControlMask|Mod1Mask,         XK_a,      spawn,          {.v = mpdAddFav } },
+	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = volUp } },
+	{ ControlMask|Mod1Mask,         XK_m,      spawn,          {.v = volDown } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
