@@ -1,3 +1,9 @@
 [submodule "slock"]
 	path = slock
 	url = http://git.suckless.org/slock
+[submodule "dzen"]
+	path = dzen
+	url = git@github.com:robm/dzen
+[submodule "conky"]
+	path = conky
+	url = git@github.com:brndnmtthws/conky
