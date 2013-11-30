@@ -1,0 +1,47 @@
+#!/bin/bash
+
+source methods.sh
+
+if [ ! $1 ]; then
+    exit
+fi
+
+if [ ! -d /etc/kalu ]; then
+    mkdir -p /etc/kalu
+fi
+
+DBPATH=/etc/kalu/kalu.db
+TABLE1=`sqlite3 $DBPATH "CREATE TABLE IF NOT EXISTS package \
+    (name VARCHAR \
+    , id VARCHAR \
+    , version VARCHAR \
+    , installedOn DATETIME \
+    , type VARCHAR \
+    , path VARCHAR \
+    , installed INTEGER \
+    , PRIMARY KEY (name, version))"`
+TABLE2=`sqlite3 $DBPATH "CREATE TABLE IF NOT EXISTS files \
+    (name VARCHAR \
+    , id VARCHAR \
+    , version VARCHAR \
+    , comment TEXT \
+    , description TEXT \
+    , type VARCHAR \
+    , url VARCHAR \
+    , PRIMARY KEY (name, version) \
+    )"`
+TABLE3=`sqlite3 $DBPATH "CREATE TABLE IF NOT EXISTS dependency \
+    (name VARCHAR \
+    , neededFor VARCHAR \
+    , requiredBy VARCHAR  \
+    )"`
+
+LOCAL_PKGS_DIR=$HOME/.packages
+if [[ "$1" == "mkcache" ]]; then
+    echo "Making cache"
+    # Go through the local packages.
+    pkgFiles=$(find $LOCAL_PKGS_DIR -name "*.files")
+    for pF in $pkgFiles; do
+        updateDB $pF $DBPATH
+    done
+fi
