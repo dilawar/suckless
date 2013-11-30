@@ -4,6 +4,3 @@
 [submodule "dzen"]
 	path = dzen
 	url = git@github.com:robm/dzen
-[submodule "conky"]
-	path = conky
-	url = git@github.com:brndnmtthws/conky
