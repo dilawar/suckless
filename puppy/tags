@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+c	kalu.py	/^    c = db.cursor()$/;"	v	language:Python
+colorPrint	colors.sh	/^function colorPrint$/;"	f	language:Sh
+db	kalu.py	/^    db = sql.connect(dbPath)$/;"	v	language:Python
+dbPath	kalu.py	/^dbPath = os.path.join(kaluPath, 'kalu.db')$/;"	v	language:Python
+initDB	database.sh	/^function initDB$/;"	f	language:Sh
+insertintoDB	database.sh	/^function insertintoDB$/;"	f	language:Sh
+kaluPath	kalu.py	/^kaluPath = '\/etc\/kalu'$/;"	v	language:Python
+localPkgDir	kalu.py	/^localPkgDir= os.path.join(os.environ['HOME'], '.packages')$/;"	v	language:Python
+method	kalu.py	/^import method$/;"	i	language:Python
+os	kalu.py	/^import os$/;"	i	language:Python
+pkgFiles	kalu.py	/^    pkgFiles=$(find $LOCAL_PKGS_DIR -name "*.files")$/;"	v	language:Python
+project_opened	.ropeproject/config.py	/^def project_opened(project):$/;"	f	language:Python
+set_prefs	.ropeproject/config.py	/^def set_prefs(prefs):$/;"	f	language:Python
+sql	kalu.py	/^import sqlite3 as sql$/;"	i	language:Python
+subprocess	kalu.py	/^import subprocess$/;"	i	language:Python
+sys	kalu.py	/^import sys$/;"	i	language:Python

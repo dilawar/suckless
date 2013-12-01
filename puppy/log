@@ -1,0 +1,6 @@
+[00;31m Making cache ..  [0m
+[INFO] [01;32m Processing package xdotool, 2.201012.3049 [0m 
+[INFO] [01;32m Processing package lftp, 4.3.8 [0m 
+[INFO] [01;32m Processing package libXaw3d, 1.6.2 [0m 
+[INFO] [01;32m Processing package intel, gpu [0m 
+[WARN] [01;31m Broken package? [0m /install/slack-desc missing.
