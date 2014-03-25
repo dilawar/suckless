@@ -1,4 +1,5 @@
 suckless
 ========
 
-My suckless tools
+dwm, dmenu and slock working together.
+
