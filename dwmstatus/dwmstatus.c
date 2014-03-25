@@ -13,6 +13,7 @@
 #include <X11/Xlib.h>
 
 char *tzargentina = "America/Buenos_Aires";
+char *tzindia = "Asia/Kolkata";
 char *tzutc = "UTC";
 char *tzberlin = "Europe/Berlin";
 
@@ -108,12 +109,12 @@ main(void)
 
 	for (;;sleep(90)) {
 		avgs = loadavg();
-		tmar = mktimes("%H:%M", tzargentina);
+		tmar = mktimes("%H:%M", tzindia);
 		tmutc = mktimes("%H:%M", tzutc);
 		tmbln = mktimes("KW %W %a %d %b %H:%M %Z %Y", tzberlin);
 
 		status = smprintf("L:%s A:%s U:%s %s",
-				avgs, tmar, tmutc, tmbln);
+				avgs, tmar, tmutc);
 		setstatus(status);
 		free(avgs);
 		free(tmar);
