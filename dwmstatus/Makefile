@@ -4,14 +4,33 @@ include config.mk
 
 SRC = ${NAME}.c
 OBJ = ${SRC:.c=.o}
+BATPATH=`find /sys -name BAT0 -print0 -quit`
+LNKPATH=`find /sys/class/net/wlan0/ -name operstate -print0 -quit`
+LAPATH=`find /proc -name loadavg -print0 -quit`
+
+# git@github.com:akozadaev/boxsuspend.git
+BOXSUSPEND=`which boxsuspend` 
+
 
 all: options ${NAME}
 
-options:
+options: build_host.h
 	@echo ${NAME} build options:
 	@echo "CFLAGS   = ${CFLAGS}"
 	@echo "LDFLAGS  = ${LDFLAGS}"
 	@echo "CC       = ${CC}"
+
+build_host.h:
+	@echo "#define BUILD_HOST \"`hostname`\""  > build_host.h
+	@echo "#define BUILD_OS \"`uname`\""          >> build_host.h
+	@echo "#define BUILD_PLATFORM \"`uname -m`\"" >> build_host.h
+	@echo "#define BUILD_KERNEL \"`uname -r`\""   >> build_host.h
+	@echo "#define LA_PATH \"${LAPATH}\""  >> build_host.h
+	@echo "#define BAT_NOW \"${BATPATH}/charge_now\""  >> build_host.h
+	@echo "#define BAT_FULL \"${BATPATH}/charge_full\""  >> build_host.h
+	@echo "#define BAT_STAT \"${BATPATH}/status\""  >> build_host.h
+	@echo "#define LNK_PATH \"${LNKPATH}\"" >> build_host.h
+	@echo "#define BOX_SUSPEND \"${BOXSUSPEND}\"" >> build_host.h
 
 .c.o:
 	@echo CC $<
