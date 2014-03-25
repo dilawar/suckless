@@ -1,10 +1,7 @@
-#!/bin/bash
-(
-    cd ./dmenu/ && make clean install
-)
-(
-    cd ./dwm/ && make clean install
-)
-( 
-    cd ./slock/ && make clean install
-)
+#!/bin/bash   
+set +e
+cd ./dmenu/     && sudo make clean install && cd ..
+cd ./dwm/ &    & sudo make clean install && cd ..
+cd ./slock/ && sudo make clean install && cd ..
+cd ./dwmstatus && sudo make clean install && cd ..
+
