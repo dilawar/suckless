@@ -1,4 +1,4 @@
-NAME = suspend-statusbar
+NAME = dwmstatus
 VERSION = 1.2
 
 # Customize below to fit your system
