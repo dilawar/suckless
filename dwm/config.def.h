@@ -58,8 +58,8 @@ static const char *mpcNext[] = { "mpc", "next", NULL};
 static const char *mpcPrev[] = { "mpc", "prev", NULL};
 static const char *mpdDelete[] = { "~/Scripts/manage_mpc.sh", "-d", NULL};
 static const char *mpdAddFav[] = { "~/Scripts/manage_mpc.sh","-a", NULL};
-static const char *volUp[] = { "amixer","-q", "set", "PCM", "2dB+", NULL};
-static const char *volDown[] = { "amixer","-q", "set", "PCM", "2dB-", NULL};
+static const char *volUp[] = { "amixer","-q", "sset", "Master", "2dB+", NULL};
+static const char *volDown[] = { "amixer","-q", "sset", "Master", "2dB-", NULL};
 static const char *lock[] = { "slock", NULL};
 
 static Key keys[] = {
