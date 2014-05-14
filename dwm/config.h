@@ -58,8 +58,9 @@ static const char *mpcNext[] = { "mpc", "next", NULL};
 static const char *mpcPrev[] = { "mpc", "prev", NULL};
 static const char *mpdDelete[] = { "~/Scripts/manage_mpc.sh", "-d", NULL};
 static const char *mpdAddFav[] = { "~/Scripts/manage_mpc.sh","-a", NULL};
-static const char *volUp[] = { "amixer","-q", "set", "PCM", "2dB+", NULL};
-static const char *volDown[] = { "amixer","-q", "set", "PCM", "2dB-", NULL};
+static const char *volUp[] = { "amixer","-q", "sset", "Master", "5%+", NULL};
+static const char *volDown[] = { "amixer","-q", "sset", "Master", "5%-", NULL};
+static const char *unmute[] = { "amixer","-q", "set", "Master", "unmute", NULL};
 static const char *lock[] = { "slock", NULL};
 
 static Key keys[] = {
@@ -73,6 +74,7 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,         XK_a,      spawn,          {.v = mpdAddFav } },
 	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = volUp } },
 	{ ControlMask|Mod1Mask,         XK_m,      spawn,          {.v = volDown } },
+	{ ControlMask|Mod1Mask|ShiftMask,XK_l,      spawn,         {.v = unmute } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
