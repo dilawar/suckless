@@ -16,9 +16,12 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 dwmstatus
 dwm
 slock
+=======
 slock
 dwm
 dwmstatus
+>>>>>>> 6ddd4b429bc47d063226cf7deb541a1519612c6c
